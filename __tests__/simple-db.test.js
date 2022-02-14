@@ -27,4 +27,25 @@ describe('simple database', () => {
       .then(() => simpleDb.get(obj.id))
       .then(actual => expect(actual).toEqual(expected));
   });
+
+  it ('gets all saved objects', () => {
+    const newDB = new SimpleDb(TEST_DIR);
+
+    const object1 = { 
+      boogers: 'you should eat them', 
+      ohSoManyBoogers: 'what a big truck!' 
+    };
+
+    const object2 = { 
+      boogers: 'my turtle can be opinionated', 
+      ohSoManyBoogers: 'he wanted very badly to survive' 
+    };
+
+    return newDB
+      .save(object1)
+      .then(() => newDB.save(object2))
+      .then(() => newDB.getAll())
+      .then(actual => expect(actual).toEqual(expect.arrayContaining([object1, object2])));
+
+  });
 });
