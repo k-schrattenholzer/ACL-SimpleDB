@@ -48,4 +48,5 @@ describe('simple database', () => {
       .then(actual => expect(actual).toEqual(expect.arrayContaining([object1, object2])));
 
   });
+
 });
