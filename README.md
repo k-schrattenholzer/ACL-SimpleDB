@@ -4,10 +4,6 @@
 
 Use the [copy file/dir demo](https://github.com/martypdx/copy-demo) to guide you in how to construct async workflows
 
-## Getting Started
-
-Use [this template](https://github.com/alchemycodelab/simple-db) to get started. 
-
 **Don't forget to `npm i`!**
 
 Here is a link to the [node fs docs](https://nodejs.org/dist/latest-v16.x/docs/api/fs.html)
